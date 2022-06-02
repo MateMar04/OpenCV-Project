@@ -7,15 +7,12 @@ img2 = cv.imread("src/pibes_2.jpg")
 
 down_width = 756  # Tamaño de la imagen final
 down_height = 1008
-
 down_points = (down_width, down_height)
 
-resized_down_img1 = cv.resize(img1, down_points,
-                              interpolation=cv.INTER_LINEAR)  # Achicamos las imagenes ya que sino no entra en la pantalla por su resolucion tan alta
+resized_down_img1 = cv.resize(img1, down_points, interpolation=cv.INTER_LINEAR)  # Achicamos las imagenes ya que sino no entra en la pantalla por su resolucion tan alta
 resized_down_img2 = cv.resize(img2, down_points, interpolation=cv.INTER_LINEAR)
 
-imgGray1 = cv.cvtColor(resized_down_img1,
-                       cv.COLOR_BGR2GRAY)  # Aplicamos un filtro de escala de grises para mejorar la efectividad
+imgGray1 = cv.cvtColor(resized_down_img1, cv.COLOR_BGR2GRAY)  # Aplicamos un filtro de escala de grises para mejorar la efectividad
 imgGray2 = cv.cvtColor(resized_down_img2, cv.COLOR_BGR2GRAY)
 
 faces1 = face_cascade.detectMultiScale(imgGray1, 1.1, 4)  # Devuelve un rectangulo con coordenadas alrededor de los rostros detectados
