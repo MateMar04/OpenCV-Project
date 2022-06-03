@@ -9,11 +9,6 @@ imgRezised = cv.resize(img, (700, 700))
 
 # Define el tamaño que va a tener la imagen en perspectiva
 width, height = 700, 250
-width, height = 700, 250
-pts1 = np.float32([[72, 275], [620, 236], [77, 431], [683, 372]])
-pts2 = np.float32([[0, 0], [width, 0], [0, height], [width, height]])
-matrix = cv.getPerspectiveTransform(pts1, pts2)
-imgOutput = cv.warpPerspective(imgRezised, matrix, (width, height))
 
 # Puntos de los vertices en la imagen original
 pts1 = np.float32([[72, 275], [620, 236], [77, 431], [683, 372]])
