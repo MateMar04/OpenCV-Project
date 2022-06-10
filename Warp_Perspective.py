@@ -4,7 +4,7 @@ import numpy as np
 # Define las imagenes a inspeccionar
 img = cv.imread("src/hoja.jpeg")
 
-# Tamaño de la imagen original
+# Mofifica el tamaño de la imagen original
 imgRezised = cv.resize(img, (700, 700))
 
 # Define el tamaño que va a tener la imagen en perspectiva
